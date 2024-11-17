@@ -12,3 +12,58 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.bookshelf {
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 8rem;
+  background: #121212;
+  border-bottom: 0.25rem solid saddlebrown;
+  margin-bottom: 1rem;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -0.75rem;
+    left: 0.5rem;
+    width: 0.25rem;
+    height: 0.75rem;
+    background: saddlebrown
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -0.75rem;
+    right: 0.75rem;
+    width: 0.25rem;
+    height: 0.75rem;
+    background: saddlebrown
+  }
+
+  &:hover .bookshelf-menu {
+    display: flex;
+  }
+}
+
+.bookshelf-menu {
+  position: absolute;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  right: 0;
+  transform: translateX(100%);
+}
+
+.books {
+  display: flex;
+}
+
+.book {
+  width: 1rem;
+  height: 6rem;
+  writing-mode: vertical-rl;
+}
